@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almaz Tech</title>
+    <link rel="stylesheet" href="static/styles.css">
+     <link rel="icon" href="{{ url_for('static', filename='logo1.png') }}" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo1.png') }}" alt="Almaz Tech Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О Нас</a></li>
+            <li><a href="#products">Продукты</a></li>
+            <li><a href="#contacts">Контакты </a></li>
+        </ul>
+    </div>
+
+    <div id="home" class="hero">
+        <div class="hero-content">
+            <h1>Добро пожаловать в AlmAzTech</h1>
+            <p>Профессиональные решения в области металлопродукции.</p>
+            <span>Твое решение. Твое творение. Твой выбор.</span>
+        </div>
+    </div>
+
+    <div id="products" class="products-section">
+        <h2>Актуальное наличие и реальные цены:</h2>
+        </div>
+
+<div class="row main-cat">
+    <div class="col-sm-3">
+        <ul id="myUL">
+            <li><span class="caret caret-down">Черный металлопрокат</span>
+                <ul class="nested f-row active">
+                    <li><a href="/products/armatura">Арматура</a></li>
+                    <li><a href="/products/katanka">Катанка</a></li>
+                    <li><a href="/products/krug">Круг</a></li>
+                    <li><a href="/products/list">Лист</a></li>
+                    <li><a href="/products/profile">Профилированный лист</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="myUL">
+            <li><span class="caret">Фасонный прокат</span>
+                <ul class="nested">
+                    <li><a href="/products/ugolok">Уголок</a></li>
+                    <li><a href="/products/shveller">Швеллер</a></li>
+                    <li><a href="/products/balka">Балка</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="myUL">
+            <li><span class="caret">Трубный прокат</span>
+                <ul class="nested">
+                    <li><a href="/products/vgp">ВГП</a></li>
+                    <li><a href="/products/elektro">Труба Электросварная</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-3">
+        <ul id="myUL">
+            <li><span class="caret caret-down">Бесшовные трубы</span>
+                <ul class="nested f-row active">
+                    <li><a href="/products/grch">Труба горячекатаная</a></li>
+                    <li><a href="/products/holod">Труба Холоднотянутая</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="myUL">
+            <li><span class="caret">Трубы большого диаметра</span>
+                <ul class="nested">
+                    <li><a href="/products/magistralnaya">Труба магистральная</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="myUL">
+            <li><span class="caret">Трубы Чугунные (ВЧШГ)</span>
+                <ul class="nested">
+                    <li><a href="/products/vchshg">Труба ВЧШГ (Раструбные)</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+    <script defer>
+var toggler = document.getElementsByClassName("caret");
+for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+    });
+}
+</script>
+
+<div id="about" class="about-section">
+    <div class="about-content">
+        <h2>О компании</h2>
+        <p>
+            Компания <strong>AlmAzTech</strong> — это лидер в области производства и поставок металлопродукции.
+            Мы предлагаем широкий ассортимент высококачественных изделий, начиная от проволоки и плит,
+            заканчивая трубами и прутками, которые удовлетворят потребности любой отрасли.
+        </p>
+        <p>
+            Наши ценности основаны на надежности, инновациях и высоком уровне сервиса.
+            Мы стремимся быть вашим первым выбором в области металлопродукции, предоставляя конкурентные цены
+            и гарантированное качество.
+        </p>
+        <p>
+            Присоединяйтесь к нам сегодня, чтобы воплотить ваши идеи в реальность с помощью
+            материалов, которым можно доверять.
+        </p>
+    </div>
+</div>
+
+
+<footer class="footer" id="contacts">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p><strong>Контакты:</strong></p>
+                <p><a href="tel:+89155990111">📞 +7 (915) 599-01-11</a></p>
+                <p><a href="mailto:info@almaztech.pro">✉ info@almaztech.pro</a></p>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="/policy" target="_blank">Политика конфиденциальности</a></li>
+                    <li><a href="/terms" target="_blank">Условия использования</a></li>
+                </ul>
+                <p>&copy; 2024 ALMAZTECH. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
